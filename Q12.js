@@ -1,11 +1,19 @@
-// Reverse a string in place. 
-
-function ReverseAtr(Str){
-    let ReversedString =""
-for(let i = Str.length-1 ; i>=0 ;i--){
-  ReversedString  =ReversedString + Str[i]
-}
-return ReversedString
-}
-
-console.log(ReverseAtr("String"))
+function reverseInPlace(str) {
+    // Convert to an array because strings are immutable
+    let charArray = str.split('');
+    
+    let left = 0;
+    let right = charArray.length - 1;
+  
+    while (left < right) {
+      // Swap
+      [charArray[left], charArray[right]] = [charArray[right], charArray[left]];
+      left++;
+      right--;
+    }
+  
+    return charArray.join('');
+  }
+  
+  console.log(reverseInPlace("String")); // Output: gnirtS
+  
