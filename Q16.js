@@ -1,17 +1,15 @@
 //Remove duplicate characters from a string.
 
 function duplicate(Str) {
-    let count = {};
-    let duplicates = []
-    for(let char of Str ){
-        count[char] = (count[char] || 0) +1
-    }    
-    for(let val in count){
-        if(count[val] > 1){
-            duplicates.push(val)
+    let FinalStr =  "";
+    let seen = new Set()
+    for(let char of Str){
+        if(!seen.has(char)){
+            seen.add(char)
+            FinalStr += char
         }
     }
-    return duplicates
+return FinalStr
 }
 
 console.log(duplicate("asdfademvp"))
