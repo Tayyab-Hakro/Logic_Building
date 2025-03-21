@@ -1,6 +1,5 @@
 function findEquilibriumIndex(arr) {
     const totalSum = arr.reduce((acc, val) => acc + val, 0);
-    console.log(totalSum)
     let leftSum = 0;
   
     for (let i = 0; i < arr.length; i++) {

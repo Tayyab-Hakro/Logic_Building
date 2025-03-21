@@ -1,3 +1,5 @@
+// 33. Implement strstr() function to find the first occurrence of a
+// substring.
 function strstr(main, sub) {
     for (let i = 0; i <= main.length - sub.length; i++) {
       let match = true;

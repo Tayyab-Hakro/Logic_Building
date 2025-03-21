@@ -8,7 +8,6 @@ function anagrams(str1, str2) {
   
     for (let i = 0; i < str1.length; i++) {
       let index = str2Arr.indexOf(str1[i]);
-      console.log(index + "is value is")
       if (index === -1) {
         // Letter not found, not an anagram
         return false;
