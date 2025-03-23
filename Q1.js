@@ -12,9 +12,8 @@ function findMinInRotatedArray(arr) {
             // Minimum is at mid or to the left of mid
             right = mid;
         }
-    }
 
-    return arr[left];
+        }
 }
 
 console.log(findMinInRotatedArray([4, 5, 6, 1, 2, 3])); // Output: 1
