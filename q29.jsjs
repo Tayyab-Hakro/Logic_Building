@@ -1,0 +1,57 @@
+// Step 1: Create a single node (box)
+class Node {
+  constructor(data) {
+    this.data = data;    // The toy in the box (data)
+    this.next = null;    // The note that points to the next box
+  }
+}
+
+// Step 2: Create the LinkedList (row of boxes)
+class LinkedList {
+  constructor() {
+    this.head = null;    // Start of the linked list (first box)
+  }
+
+  // Step 3: Insert a new node (box) at the end
+  insert(data) {
+    const newNode = new Node(data);  // Create a box with a toy
+
+    if (this.head === null) {
+      // If list is empty, this box becomes the head
+      this.head = newNode;
+    } else {
+      // Start at the head and find the last box
+      let current = this.head;
+      while (current.next !== null) {
+        current = current.next;
+      }
+
+      // Point the last box to the new box
+      current.next = newNode;
+    }
+  }
+
+  // Step 4: Print the linked list (all the boxes in line)
+  printList() {
+    let current = this.head;
+    let output = "";
+
+    while (current !== null) {
+      output += current.data + " -> ";  // Show the toy in the box
+      current = current.next;           // Move to the next box
+    }
+
+    output += "null";  // End of the line
+    console.log(output);
+  }
+}
+
+// Step 5: Example usage
+const myList = new LinkedList();
+
+myList.insert(10);
+myList.insert(20);
+myList.insert(30);
+myList.insert(40);
+
+myList.printList();  // Output: 10 -> 20 -> 30 -> 40 -> null

@@ -15,9 +15,9 @@ var processQueries = function(queries, m) {
     // Process each query
     for (let q of queries) {
         let index = P.indexOf(q);   // find the index of the query number in P
-        result.push(index);            // add the index to result
-        console.log(result)
-        P.splice(index, 1);         // remove the element from its current position
+        result.push(index);         // add the index to result
+        P.splice(index, 1);  
+        console.log(P)       // remove the element from its current position
         P.unshift(q);               // move it to the front
     }
 
