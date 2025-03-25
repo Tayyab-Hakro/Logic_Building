@@ -1,12 +1,12 @@
 public class Main {
     public static void main(String[] args) {
-        int num = 5; // Binary: 10101
-        int bitPosition = 3; // Counting from right, 0-based index (6th bit is index 5)
-         String Binary = Integer.toBinaryString(num);
-            System.out.println(Binary);
-        int bitValue = (num >> bitPosition) & 1;
-        System.out.println(bitValue); // Output: 0 (6th bit of 10101 is 0)
-    }        
+        int num = 5; // Binary: 101
+        int bitPosition = 2; // 0-based index (setting the 4th bit)
+        int Bitmase = 1 << bitPosition;
+        int NotBitmase = ~(Bitmase);
 
-    
+        int bitresult  = NotBitmase & num;
+        System.out.println(bitresult);
+      
+    }
 }
