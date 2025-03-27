@@ -1,5 +1,4 @@
-var removeOuterParentheses = function(s) 
-{
+var removeOuterParentheses = function(s) {
     let ans = ''
     let cnt = 0
     for (ch of s)

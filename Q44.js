@@ -5,7 +5,6 @@
 var convertDateToBinary = function(date) {
     // Split the date string into year, month, and day
     let [year, month, day] = date.split('-');
-    console.log(date + 'is')
 
     // Convert each part to binary without leading zeros
     let binaryYear = parseInt(year, 10).toString(2);

@@ -7,7 +7,6 @@ var countDistinctIntegers = function(nums) {
     
     for (let num of nums) {
         set.add(num); // Step 2: Add the number itself.
-        console.log(set)
         // Reverse the number:
         let reversedNum = parseInt(num.toString().split('').reverse().join(''));
         set.add(reversedNum); // Step 3: Add the reversed number.
