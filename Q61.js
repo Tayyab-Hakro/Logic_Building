@@ -4,11 +4,12 @@ function minimumSum(num) {
 
     // Step 2: Form two numbers optimally
     let new1 = digits[0] * 10 + digits[2];
+    console.log(new1)
     let new2 = digits[1] * 10 + digits[3];
 
-    return new1 + new2;
+  //  return new1 + new2;
 }
 
 // Test cases
-console.log(minimumSum(2932)); // Output: 52
-console.log(minimumSum(4009)); // Output: 13
+//console.log(minimumSum(2932)); // Output: 52
+//console.log(minimumSum(4009)); // Output: 13
