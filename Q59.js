@@ -1,12 +1,5 @@
-var prefixCount = function(words, pref) {
-    let count = 0;
-    const prefLen = pref.length;
-    for (let word of words) {
-        if (word.length >= prefLen) {
-            if (word.substring(0, prefLen) === pref) {
-                count++;
-            }
-        }
-    }
-    return count;
+var minimumSum = function(num) {
+    const temp=num.toString().split('').sort();
+return (parseInt(temp[0]+temp[2])+parseInt(temp[1]+temp[3]));
+    
 };
