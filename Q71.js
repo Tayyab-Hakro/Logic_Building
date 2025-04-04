@@ -14,7 +14,8 @@ var garbageCollection = function(garbage, travel) {
     for (let i = 1; i < garbage.length; i++) {
         for (let type in lastSeen) {
             if (lastSeen[type] >= i) {
-                totalTime += travel[i - 1]; // Add travel time if truck needs to pass this road
+                totalTime += travel[i - 1]; // Add travel time if truck 
+                // needs to pass this road
             }
         }
     }

@@ -10,7 +10,6 @@ var kthDistinct = function(arr, k) {
     for (let str of arr) {
         countMap.set(str, (countMap.get(str) || 0) + 1);
     }
-    console.log(countMap)
     // Find the k-th distinct string
     let distinctCount = 0;
     for (let str of arr) {
