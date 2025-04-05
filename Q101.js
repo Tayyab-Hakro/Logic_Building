@@ -1,21 +1,8 @@
-var combinationSum = function(candidates, target) {
-    let result = [];
+let arr = [1, 2, 4, 5];
 
-    const backtrack = (current, start, total) => {
-        if (total === target) {
-            result.push([...current]);
-            return;
-        }
-
-        if (total > target) return;
-
-        for (let i = start; i < candidates.length; i++) {
-            current.push(candidates[i]);
-            backtrack(current, i, total + candidates[i]); // reuse same element
-            current.pop(); // backtrack
-        }
-    };
-
-    backtrack([], 0, 0);
-    return result;
-};
+for (let i = 1; i < arr.length; i++) {
+    if (arr[i] !== i + 1) {
+        console.log(i + 1); // Missing number
+        break;
+    }
+}
